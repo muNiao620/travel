@@ -1,14 +1,15 @@
 <template>
 	<div>
-		<router-link 
-			tag="div" 
-			to="/" 
+		<router-link
+			tag="div"
+			to="/"
 			class="header-abs"
 			v-show="showAbs">
 			<div class="iconfont header-abs-back">&#xe624;</div>
 		</router-link>
-		<div 
-			class="header-fixed" v-show="!showAbs"
+		<div
+			class="header-fixed"
+			v-show="!showAbs"
 			:style="opacityStyle">
 			<router-link to="/">
 				<div class="iconfont header-fixed-back">&#xe624;</div>
@@ -21,7 +22,7 @@
 <script>
 // import CommonGallary from 'common/gallary/Gallary'
 export default {
-	name: "DetailHeader",
+	name: 'DetailHeader',
 	data () {
 		return {
 			showAbs: true,

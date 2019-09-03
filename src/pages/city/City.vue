@@ -2,8 +2,13 @@
 	<div>
 		<CityHeader/>
 		<CitySearch :cities="cities" />
-		<CityList :cities="cities" :hot="hotCities" :letter="letter"/>
-		<CityAlphabet :cities="cities" @change="handleLetterChange" />
+		<CityList
+			:cities="cities"
+			:hot="hotCities"
+			:letter="letter" />
+		<CityAlphabet
+			:cities="cities"
+			@change="handleLetterChange" />
 	</div>
 </template>
 
@@ -52,5 +57,5 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-	
+
 </style>

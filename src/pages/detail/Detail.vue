@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<DetailBanner 
+		<DetailBanner
 		:sightName="sightName"
 		:bannerImg="bannerImg"
 		:bannerImgs="gallaryImgs" />
@@ -17,7 +17,7 @@ import DetailHeader from './components/Header'
 import DetailList from './components/List'
 import axios from 'axios'
 export default {
-	name: "Detail",
+	name: 'Detail',
 	components: {
 		DetailBanner,
 		DetailHeader,
@@ -30,6 +30,9 @@ export default {
 			gallaryImgs: [],
 			list: []
 		}
+	},
+	mounted () {
+		this.getDetailInfo()
 	},
 	methods: {
 		getDetailInfo () {
@@ -49,9 +52,6 @@ export default {
 				this.list = data.categoryList
 			}
 		}
-	},
-	mounted () {
-		this.getDetailInfo()
 	}
 }
 </script>

@@ -1,12 +1,16 @@
 <template>
 	<div>
-		<div class="banner" @click="handleBannerClick">
-			<img class="banner-img" :src="bannerImg">
+		<div
+			class="banner"
+			@click="handleBannerClick">
+			<img
+				class="banner-img"
+				:src="bannerImg">
 			<div class="banner-info">
-				<div class="banner-title">{{this.sightName}}</div>
+				<div class="banner-title">{{sightName}}</div>
 				<div class="banner-number">
 					<span class="iconfont banner-icon">&#xe689;</span>
-					{{this.bannerImgs.length}}
+					{{bannerImgs.length}}
 				</div>
 			</div>
 		</div>
@@ -23,7 +27,7 @@
 import CommonGallary from 'common/gallary/Gallary'
 import FadeAnimation from 'common/fade/FadeAnimation'
 export default {
-	name: "DetailBanner",
+	name: 'DetailBanner',
 	props: {
 		sightName: String,
 		bannerImg: String,
